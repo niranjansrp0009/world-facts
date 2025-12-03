@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Article Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <div class="logo-area">
+        <div class="logo-mark">AI</div>
+        <div class="logo-text">
+          <h1>AI Article Hub</h1>
+          <p class="tagline">Fresh human-style articles in a tap</p>
+        </div>
+      </div>
+      <nav class="nav-actions">
+        <button id="homeButton" class="nav-btn">Home</button>
+        <button id="favoritesButton" class="nav-btn">Favorites</button>
+      </nav>
+    </header>
+
+    <main class="app-main">
+      <!-- Home: Topic Grid -->
+      <section id="homeView" class="view view-active">
+        <h2 class="section-title">Pick a topic</h2>
+        <p class="section-subtitle">
+          Choose a niche and tap <strong>Next Article</strong> to generate unlimited unique reads.
+        </p>
+        <div id="topicGrid" class="topic-grid">
+          <!-- Filled by JavaScript -->
+        </div>
+      </section>
+
+      <!-- Article View -->
+      <section id="articleView" class="view">
+        <div class="article-header-bar">
+          <button id="backToHome" class="ghost-btn">&larr; Topics</button>
+          <div class="article-meta-top">
+            <span id="articleTopicLabel" class="badge badge-topic"></span>
+            <span id="articleTimeLabel" class="badge badge-time"></span>
+          </div>
+        </div>
+
+        <article class="article-card">
+          <h2 id="articleTitle" class="article-title"></h2>
+          <p id="articleDate" class="article-date"></p>
+          <div id="articleBody" class="article-body">
+            <!-- Paragraphs & images injected by JS -->
+          </div>
+        </article>
+
+        <div class="article-controls">
+          <button id="prevArticleBtn" class="primary-btn secondary" disabled>Previous</button>
+          <button id="nextArticleBtn" class="primary-btn">Next Article</button>
+        </div>
+
+        <div class="article-actions">
+          <button id="favoriteBtn" class="icon-btn">
+            <span id="favoriteIcon" class="heart">&#9829;</span>
+            <span id="favoriteText">Add to Favorites</span>
+          </button>
+          <button id="shareBtn" class="icon-btn">
+            <span class="share-icon">&#10150;</span>
+            <span>Share</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Favorites View -->
+      <section id="favoritesView" class="view">
+        <div class="favorites-header">
+          <button id="backFromFavorites" class="ghost-btn">&larr; Back</button>
+          <h2 class="section-title">Favorite Articles</h2>
+        </div>
+        <p class="section-subtitle">
+          Your saved reads live here. Tap an article to open it again.
+        </p>
+        <div id="favoritesList" class="favorites-list">
+          <!-- Filled by JS -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>AI Article Hub &middot; Generated on-device &middot; No login, no tracking.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
